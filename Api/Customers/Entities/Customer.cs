@@ -1,4 +1,7 @@
 
+
+using WaterBilling.Api.Billing.Entities;
+using WaterBilling.Api.CustomerSupport.Entities;
 using WaterBilling.Api.WaterUsage.Entities;
 
 namespace WaterBilling.Api.Customers.Entities
@@ -10,6 +13,8 @@ namespace WaterBilling.Api.Customers.Entities
         public string Msisdn { get; set; } = string.Empty;
         public int MeterId { get; set; }
         public virtual Meter Meter { get; set; } = new Meter();
+        public Bill Bill { get; set; } = new Bill();
+        public ICollection<Complaint> Complaints{ get; set; } = new Collection<Complaint>();
 
     }
 }

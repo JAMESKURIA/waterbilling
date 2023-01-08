@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using WaterBilling.Api.Billing.Entities;
 using WaterBilling.Api.Customers.Entities;
 using WaterBilling.Api.Infrastructure.Entities;
 
@@ -15,8 +16,9 @@ namespace WaterBilling.Api.WaterUsage.Entities
         public Customer Customer { get; set; } = new Customer();
         public int ZoneId { get; set; }
         public Zone Zone { get; set; } = new Zone();
-
         public Consumption Consumption = new Consumption();
+        public Bill Bill { get; set; } = new Bill();
+        public ICollection<UsageHistory> UsageHistory { get; set; } = new Collection<UsageHistory>();
 
 
     }

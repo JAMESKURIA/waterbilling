@@ -1,3 +1,4 @@
+global using System.Collections.ObjectModel;
 using Microsoft.EntityFrameworkCore;
 using WaterBilling.Data;
 
